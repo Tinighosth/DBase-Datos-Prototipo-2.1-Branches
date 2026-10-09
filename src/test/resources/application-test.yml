@@ -1,0 +1,5 @@
+seguridad:
+  bcrypt-strength: 4                # rápido en pruebas
+  rate-limit:
+    lectura-por-minuto: 100000
+    escritura-por-minuto: 100000
