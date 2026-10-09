@@ -1,0 +1,14 @@
+# Perfil de producción. Activar con SPRING_PROFILES_ACTIVE=prod
+spring:
+  flyway:
+    # Flyway usa el rol dueño del esquema; la API usa gd_app (sin DELETE ni DDL)
+    user: ${DB_MIGRATION_USER}
+    password: ${DB_MIGRATION_PASSWORD}
+
+server:
+  # Solo detrás de un proxy de confianza que termine TLS y reescriba X-Forwarded-*
+  forward-headers-strategy: native
+  servlet:
+    session:
+      cookie:
+        secure: true

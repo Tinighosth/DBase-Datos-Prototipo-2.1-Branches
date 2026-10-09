@@ -1,0 +1,22 @@
+# Build
+target/
+*.class
+*.jar
+
+# Secretos y entorno (NUNCA versionar)
+.env
+*.env
+!.env.example
+application-local.yml
+
+# Respaldos con datos reales
+*.dump
+*.bak
+backups/
+
+# IDE / sistema
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
